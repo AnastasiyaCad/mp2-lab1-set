@@ -6,6 +6,7 @@ TEST(TBitField, can_create_bitfield_with_positive_length)
 {
   ASSERT_NO_THROW(TBitField bf(3));
 }
+//
 
 TEST(TBitField, can_get_length)
 {
@@ -13,7 +14,7 @@ TEST(TBitField, can_get_length)
 
   EXPECT_EQ(3, bf.GetLength());
 }
-
+//
 TEST(TBitField, new_bitfield_is_set_to_zero)
 {
   TBitField bf(100);
@@ -26,7 +27,7 @@ TEST(TBitField, new_bitfield_is_set_to_zero)
 
   EXPECT_EQ(0, sum);
 }
-
+//
 TEST(TBitField, can_set_bit)
 {
   TBitField bf(10);
@@ -110,7 +111,7 @@ TEST(TBitField, can_assign_bitfields_of_equal_size)
   EXPECT_NE(0, bf2.GetBit(0));
   EXPECT_NE(0, bf2.GetBit(1));
 }
-
+///////
 TEST(TBitField, assign_operator_changes_bitfield_size)
 {
   const int size1 = 2, size2 = 5;
@@ -169,6 +170,7 @@ TEST(TBitField, or_operator_applied_to_bitfields_of_equal_size)
 
   EXPECT_EQ(expBf, bf1 | bf2);
 }
+
 
 TEST(TBitField, or_operator_applied_to_bitfields_of_non_equal_size)
 {
